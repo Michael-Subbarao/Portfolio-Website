@@ -5,6 +5,18 @@
 @layer base {
   body {
     @apply max-w-2xl mx-auto px-4;
-    @apply dark:bg-black dark:text-gray-100 bg-gray-50 text-gray-900
+    @apply bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 
   }
+  
+}
+@layer utilities {
+::-webkit-scrollbar {
+  width:2em;
+}
+::-webkit-track {
+  background:hsl(4, 92%, 30%);
+}
+::-webkit-scrollbar-thumb {
+  width:100vw;
+}
 }
