@@ -9,7 +9,7 @@ const Main = (href) => {
     router.push(href)
   }
   return (
-    <section className="h-96 mt-48">
+    <section className="h-96 mt-48 pr-60 pl-60">
       <h1 className="text-7xl font-bold">Hi I am <span className="text-blue-600 dark:text-rose-600">Michael Subbarao</span></h1>
       <h3 className="text-4xl my-3">I am Full Stack Web Developer</h3>
       <p className="text-slate-50 mb-8">About Me!</p>

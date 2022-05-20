@@ -12,7 +12,7 @@ const Project = (props: any) => {
   return (
     <div className="">
     
-    <div className="bg-white p-8 rounded-bl-md rounded-br-md lg:rounded-bl-none lg:rounded-tr-md h-96 w-96">
+    <div className="bg-white p-8 rounded-bl-md rounded-br-md lg:rounded-bl-none lg:rounded-tr-md h-full w-full">
       <h2 className="text-gray-700 font-semibold">{title}</h2>
       <p className="text-sm text-gray-600 mt-4">{description}</p>
       <div className="flex items-center mt-8 lg:mt-4">

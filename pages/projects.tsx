@@ -37,13 +37,12 @@ const projectList = [{
 }]
 export default function projects() {
   return (
-    <div className=" projects grid grid-rows-2 grid-cols-2 gap-30 grid-flow-col gap-7">
+    <div className=" projects grid grid-rows-2 grid-cols-2 gap-30 grid-flow-col gap-7 justify-center items-center content-center">
       {
           projectList.map((project)=>{
             return(
-            <div key =  {project.title + "container"} className = "h-48 w-48">
-            <Project title={project.title} description= {project.description} readMore={project.readMore} role={project.role} key = {project.title}/>;
-            </div>)
+            <Project title={project.title} description= {project.description} readMore={project.readMore} role={project.role} key = {project.title}/>
+            )
           })
       }
     </div>
