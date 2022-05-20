@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router'
 import Button from "../components/Button"
 
-const Main = (href) => {
+const Main2 = (href) => {
   const router = useRouter();
-  const handleClick = (e,href) => {
+  const handleClick = (e: any ,href: string | null) => {
     e.preventDefault()
     
     router.push(href)
@@ -19,4 +19,4 @@ const Main = (href) => {
   )
 }
 
-export default Main
+export default Main2

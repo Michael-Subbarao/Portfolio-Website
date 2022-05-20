@@ -3,7 +3,7 @@ import Button from "../components/Button"
 
 const Main = (href) => {
   const router = useRouter();
-  const handleClick = (e,href) => {
+  const handleClick = (e: any , href: string | null) => {
     e.preventDefault()
     
     router.push(href)
