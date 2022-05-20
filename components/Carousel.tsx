@@ -38,7 +38,7 @@ const Carousel = (props) => {
     };
   
     const arrowStyle =
-      "absolute text-white text-2xl z-10 bg-black md:h-10 h-5 md:w-10 w-5 rounded-full opacity-75 flex items-center justify-center";
+      "absolute text-white text-l md:text-2xl z-10 bg-black md:h-10 h-5 md:w-10 w-5 rounded-full opacity-75 flex items-center justify-center";
     const sliderControl = (isLeft) => (
       <button
         type="button"
