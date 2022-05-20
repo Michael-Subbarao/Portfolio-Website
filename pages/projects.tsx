@@ -7,7 +7,7 @@ const projectList = [{
     description: "This app was made for the Women Voters League of Maryland to allow users to find the contact information for all of their local representatives based on their address.",
     readMore: "",
     role: "Personal Project",
-    image:"",
+    image:['1-1','1-2','1-3'],
     gif: "",
     date: "March 2021",
     stack: ["react","javascript","css3","html5","axios","cypress"]
@@ -46,7 +46,7 @@ export default function projects() {
       {
           projectList.map((project)=>{
             return(
-            <Project title={project.title} description= {project.description} readMore={project.readMore} role={project.role} stack={project.stack} key = {project.title}/>
+            <Project title={project.title} description= {project.description} readMore={project.readMore} role={project.role} stack={project.stack} img = {project.image} key = {project.title}/>
             )
           })
       }
