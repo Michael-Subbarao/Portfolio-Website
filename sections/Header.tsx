@@ -16,6 +16,7 @@ const Header = () => {
     { label: 'About', path: '/about' },
     { label: 'Projects', path: '/projects' },
     { label: 'Skills', path: '/skills' },
+    { label: 'Contact', path:'/contact'}
   ];
   const renderThemeChanger = () => {
     if(!mounted) return null;
@@ -48,7 +49,7 @@ const Header = () => {
 
   return (
     <header className="h-16 items-center justify-around flex">
-      <ul className="flex gap-4 md:gap-16 w-3/5 justify-center self-center">
+      <ul className="flex gap-2 md:gap-16 w-3/5 justify-center self-center">
         {navigations.map(nav => (
           <Link href={nav.path} key={nav.label}><a
             className="font-semibold text-gray-400 hover:text-gray-500"
