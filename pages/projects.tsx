@@ -9,39 +9,44 @@ const projectList = [{
     role: "Personal Project",
     image:"",
     gif: "",
-    date: "March 2021"
+    date: "March 2021",
+    stack: ["react","javascript","css3","html5","axios","cypress"]
 },{
-    title: "Project 2",
-    description: "This app was made for the Women Voters League of Maryland to allow users to find the contact information for all of their local representatives based on their address. This app is currently being deployed across multiple counties Women League of Voters sites in Maryland. See: (https://www.lwvwashco.org/representatives) for an example.",
-    readMore: "",
-    role: "Personal Project",
+    title: "RESTful Web API",
+    description: "RESTful API with full CRUD functionality",
+    readMore: "Built out CRUD functionality with 11 endpoints using Express and Node. Wrote custom middleware functions for validation."
+    ,
+    role: "Backend Developer",
     image:"",
     gif: "",
-    date: "March 2021"
+    date: "March 2021",
+    stack: ["javascript", "nodejs", "express","sqlite","knex"]
 },{
-    title: "Project 3",
-    description: "This app was made for the Women Voters League of Maryland to allow users to find the contact information for all of their local representatives based on their address. This app is currently being deployed across multiple counties Women League of Voters sites in Maryland. See: (https://www.lwvwashco.org/representatives) for an example.",
-    readMore: "",
-    role: "Personal Project",
+    title: "Dad Joke API",
+    description: "API with login and registration endpoints that has authentication to access a dad joke library.",
+    readMore: "Added middleware functions that restrict access to resources from non-authenticated requests. Used bcrypt to hash and store passwords, and added a login function to check passwords against the stored hashes. Wrote unit tests with Jest for each API endpoint.",
+    role: "Backend Developer",
     image:"",
     gif: "",
-    date: "March 2021"
+    date: "March 2021",
+    stack: ["javascript","express","nodejs","jest"]
 },{
-    title: "Project 4",
-    description: "This app was made for the Women Voters League of Maryland to allow users to find the contact information for all of their local representatives based on their address. This app is currently being deployed across multiple counties Women League of Voters sites in Maryland. See: (https://www.lwvwashco.org/representatives) for an example.",
+    title: "Nasa Photo of the Day",
+    description: "Fetches Astronomy Photo Of The Day from Nasa API and create a react website with styled components to show it off.",
     readMore: "",
-    role: "Personal Project",
+    role: "Frontend Developer",
     image:"",
     gif: "",
-    date: "March 2021"
+    date: "March 2021",
+    stack: ["react","javascript","css3","html5","axios"]
 }]
 export default function projects() {
   return (
-    <div className=" projects grid grid-rows-2 grid-cols-2 gap-30 grid-flow-col gap-7 justify-center items-center content-center">
+    <div className=" projects grid md:grid-rows-2 md:grid-cols-2 grid-cols-1 grid-rows-4 gap-30 grid-flow-col gap-7 justify-center items-center content-center">
       {
           projectList.map((project)=>{
             return(
-            <Project title={project.title} description= {project.description} readMore={project.readMore} role={project.role} key = {project.title}/>
+            <Project title={project.title} description= {project.description} readMore={project.readMore} role={project.role} stack={project.stack} key = {project.title}/>
             )
           })
       }
