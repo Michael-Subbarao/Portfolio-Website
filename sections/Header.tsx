@@ -52,7 +52,7 @@ const Header = () => {
       <ul className="flex gap-2 w-4/5 md:gap-16  justify-center self-center">
         {navigations.map(nav => (
           <Link href={nav.path} key={nav.label}><a
-            className="font-semibold text-gray-400 hover:text-gray-500"
+            className="font-semibold text-gray-600 dark:text-gray-400 hover:text-gray-500 transition ease-in-out"
           >{nav.label}</a></Link>
         ))}
       </ul>

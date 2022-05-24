@@ -15,7 +15,7 @@ const Carousel = (props) => {
       refs[i].current.scrollIntoView({
         behavior: "smooth",
         block: "nearest",
-        inline: "start",
+        inline: "center",
       });
     };
   

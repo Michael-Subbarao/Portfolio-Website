@@ -29,7 +29,7 @@ const projectList = [{
     image:"",
     gif: "",
     date: "March 2021",
-    stack: ["javascript","express","nodejs","jest"]
+    stack: ["javascript","express", "postgresql","sqlite","nodejs","jest"]
 },{
     title: "Nasa Photo of the Day",
     description: "Fetches Astronomy Photo Of The Day from Nasa API and create a react website with styled components to show it off.",
