@@ -25,7 +25,7 @@ const Header = () => {
     
     if(currentTheme === 'dark') {
       return (
-        <Button className="bg-gray-200 dark:bg-gray-600"
+        <Button className="bg-gray-200 dark:bg-gray-600 dark:float-right"
           onClick={() => setTheme('light')}
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -35,7 +35,7 @@ const Header = () => {
       )
     } else {
       return (
-        <Button className="bg-gray-200"
+        <Button className="bg-gray-200 float-right"
           onClick={() => setTheme('dark')}
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -48,15 +48,17 @@ const Header = () => {
   }
 
   return (
-    <header className="h-16 w-screen items-center flex">
+    <header className="h-16 mt-2 items-center flex">
+      <div className = "w-full">
       <ul className="flex gap-2 w-4/5 md:gap-16  justify-center self-center">
         {navigations.map(nav => (
           <Link href={nav.path} key={nav.label}><a
-            className="font-semibold text-gray-600 dark:text-gray-400 hover:text-gray-500 transition ease-in-out"
+            className="font-semibold hover:underline hover:bold text-gray-600 dark:text-gray-400 hover:text-gray-500 transition ease-in-out"
           >{nav.label}</a></Link>
         ))}
       </ul>
       {renderThemeChanger()}
+      </div>
     </header>
   )
 }
