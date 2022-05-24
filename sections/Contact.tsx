@@ -37,7 +37,7 @@ const Contact = () => (
               <span className="ml-auto opacity-75">Max. 1000 characters</span>
             </div>
           </label>
-          <textarea maxLength="1000" rows="4" type="text" id="subject" name="subject" className="form-input px-3 py-2 rounded-md" required />
+          <textarea maxLength={1000} rows={4} id="subject" name="subject" className="form-input px-3 py-2 rounded-md" required />
         </div>
       </div>
       <div className="flex justify-end py-4">
