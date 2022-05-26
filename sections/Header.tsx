@@ -48,12 +48,12 @@ const Header = () => {
   }
 
   return (
-    <header className="h-16 mt-2 items-center flex">
+    <header className="h-16 mt-4 items-center flex mb-4">
       <div className = "w-full">
-      <ul className="flex gap-2 w-4/5 md:gap-16  justify-center self-center">
+      <ul className="flex gap-2 md:gap-20 gap-2 justify-center self-center">
         {navigations.map(nav => (
           <Link href={nav.path} key={nav.label}><a
-            className="font-semibold hover:underline hover:bold text-gray-600 dark:text-gray-400 hover:text-gray-500 transition ease-in-out"
+            className="font-semibold text-base md:text-lg lg:text-xl hover:underline hover:text-slate-900 text-gray-600 dark:text-gray-400 dark:hover:text-gray-200 transition ease-in-out"
           >{nav.label}</a></Link>
         ))}
       </ul>

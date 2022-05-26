@@ -4,22 +4,16 @@ import Button from "../components/Button"
 import Image from 'next/image';
 import Carousel from '../components/Carousel'
 
-const Project = (props: any) => {
-  const router = useRouter();
-  const { title, description, img, gif, role, date, stack } = props;
-  const handleClick = (e: any, href: string | null) => {
-    e.preventDefault();
-    router.push(href);
-  };
-  return (
-    <div className="lg:m-10 mc-0">
+/**
+ * 
+ * <div className="shadow-lg">
       <div className="transition ease-in-out bg-slate-200 dark:bg-slate-300 p-8 rounded-bl-md rounded-br-md lg:rounded-bl-none lg:rounded-tr-md h-full w-full">
       <div className="float-right flex ">
         <p className="prose prose-slate text-slate-700 text-xs md: text-s font-semibold">
               Read More
             </p>
             <div
-              className="w-8 h-8 ml-auto bg-gray-100 hover:bg-gray-400 rounded-t-lg flex items-center justify-center"
+              className="w-8 h-8 bg-gray-100 hover:bg-gray-400 rounded-t-lg flex items-center justify-center"
               title="Read More"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
@@ -63,6 +57,57 @@ const Project = (props: any) => {
         </div>
       </div>
     </div>
+ *  
+ */
+
+const Project = (props: any) => {
+  const router = useRouter();
+  const { title, description, img, gif, role, date, stack } = props;
+  const handleClick = (e: any, href: string | null) => {
+    e.preventDefault();
+    router.push(href);
+  };
+  return (
+    <div className="p-4 ml-[5%] rounded-2xl bg-slate-50 dark:bg-slate-600 shadow-lg dark:shadow-slate-700 flex flex-col ease-linear duration-300 items-center justify-center w-[90%]">
+      <div className="mr-2 rounded-2xl">
+        <p className="m-2 font-bold pl-1 text-lg text-blue-400 dark:text-rose-400">{role}</p>
+        <h1 className="m-2 text-xl md:text-4xl font-bold text-slate-700 dark:text-slate-200">
+          {title}
+        </h1>
+        <p className="m-2 text-sm italic text-slate-700 dark:text-slate-200">
+          {description}
+        </p>
+        <div className="shadow-md dark:shadow-none  basis-2/3 relative mb-8">
+          {img && <Carousel images={img} />}
+        </div>
+
+        <div className="flex flex-row justify-center items-center">
+          <button className="md:m-2 m-auto mt-8 bg-[#5865F2] shadow-sm = dark:shadow-rose-500 bg-blue-600 dark:bg-rose-600 pt-2 pb-2 w-max rounded-xl flex flex-row  hover:bg-[#424bb6] ease-linear duration-300">
+            <h1 className="text-white text-md font-semibold text-xs w-20">
+              Read More
+            </h1>
+          </button>
+         
+          <div className="relative md:h-10  flex justify-center space-between w-full">
+            {stack &&
+              stack.map((tech, i) => {
+                return (
+                  <Image
+                    className="stroke-2"
+                    width="50px"
+                    height="50px"
+                    src={"/design_assets/icons/" + tech + ".svg"}
+                    alt={tech + " logo"}
+                    title={tech + " logo"}
+                    key={i}
+                  />
+                );
+              })}
+          </div>
+        </div>
+      </div>
+    </div>
+    
   );
 };
 

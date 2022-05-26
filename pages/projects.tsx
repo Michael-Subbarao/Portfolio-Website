@@ -42,7 +42,7 @@ const projectList = [{
 }]
 export default function projects() {
   return (
-    <div className=" projects grid md:grid-rows-2 md:grid-cols-2 grid-cols-1 grid-rows-4 gap-30 grid-flow-col gap-7 justify-center items-center content-center">
+    <div className=" projects grid md:grid-rows-2 md:grid-cols-2 grid-cols-1 grid-rows-4 grid-flow-col justify-center items-center content-center">
       {
           projectList.map((project)=>{
             return(
