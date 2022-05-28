@@ -65,7 +65,7 @@ import next from 'next';
 
 const Project = (props: any) => {
   const router = useRouter();
-  const { title, description, readMore, img, gif, role, date, stack } = props;
+  const { title, description, readMore, img, gif, role, date, stack ,github } = props;
   const [isOpen, setIsOpen] = useState(false)
   const handleClick = (e: any, href: string | null) => {
     e.preventDefault();
@@ -73,11 +73,18 @@ const Project = (props: any) => {
   };
   return (
     <div className="p-4 ml-[5%] rounded-2xl bg-slate-50 dark:bg-slate-600 shadow-lg dark:shadow-slate-700 flex flex-col ease-linear duration-300 justify-center w-[90%]">
-      <div className="mr-2 rounded-2xl">
-        <p className="m-2 font-bold pl-1 text-lg text-blue-400 dark:text-rose-400">{role}</p>
+      <div className="mr-2 rounded-2xl ">
+        <p className="m-2 font-bold pl-1 text-lg text-blue-400 dark:text-rose-400 flex flex-row gap-10">{role}<a className = "dark:bg-slate-300 rounded-full  w-8 h-8 md:h-10 md:w-10" href={github} target="_blank" rel="noopener noreferrer">
+          <img
+                    className="dark:stroke-1 w-8 h-8 md:h-10 md:w-10"
+                    src="/design_assets/icons/github.svg"
+                    alt="GitHub logo"
+                    title="GitHub logo"
+                  />
+          </a></p>
         <h1 className="m-2 text-xl md:text-4xl font-bold text-slate-700 dark:text-slate-200">
           {title}
-        </h1>
+          </h1>
         <p className="m-2 text-sm italic text-slate-700 dark:text-slate-200">
           {description}
         </p>
@@ -108,7 +115,7 @@ const Project = (props: any) => {
                   );
                 })}
               </p>
-              <div className="shadow-md dark:shadow-none  w-full md:w-2/3 relative mb-8">
+              <div className="shadow-md dark:shadow-none  w-full pt:10 md:w-2/3 lg:w-1/2 relative mb-8">
                 {img && <Carousel images={img} />}
               </div>
               <div className="relative md:h-10  flex justify-around lg:w-[50%]">

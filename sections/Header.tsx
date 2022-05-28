@@ -67,7 +67,7 @@ const Header = () => {
                     title="linkedIn logo"
                   />
         </a>
-        <a className = "dark:bg-slate-50 rounded-full" href="https://github.com/Michael-Subbarao" target="_blank" rel="noopener noreferrer">
+        <a className = "dark:bg-slate-300 dark-outline-slate-600 rounded-full" href="https://github.com/Michael-Subbarao" target="_blank" rel="noopener noreferrer">
         <img
                     className="dark:stroke-1 h-10 w-10 "
                     src="/design_assets/icons/github.svg"

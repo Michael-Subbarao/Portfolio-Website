@@ -11,11 +11,12 @@ const projectList = [{
     "App is responsive for mobile",
     "In deployment non-structural CSS design is done by League of Women Voters"
   ],
-    role: "Personal Project",
+    role: "Frontend Developer",
     image:['1-1','1-2','1-3'],
     gif: "",
     date: "March 2021",
-    stack: ["react","javascript","css3","html5","axios","cypress"]
+    stack: ["react","javascript","css3","html5","axios","cypress"],
+    github: 'https://github.com/Michael-Subbarao/League-of-Women-Voters-App'
 },{
     title: "RESTful Web API",
     description: "RESTful API with full CRUD functionality",
@@ -25,7 +26,8 @@ const projectList = [{
     image:"",
     gif: "",
     date: "March 2021",
-    stack: ["javascript", "nodejs", "express","sqlite","knex"]
+    stack: ["javascript", "nodejs", "express","sqlite","knex"],
+    github: 'https://github.com/Michael-Subbarao/web-sprint-challenge-adding-data-persistence'
 },{
     title: "Dad Joke API",
     description: "API with login and registration endpoints that has authentication to access a dad joke library.",
@@ -34,7 +36,8 @@ const projectList = [{
     image:"",
     gif: "",
     date: "March 2021",
-    stack: ["javascript","express", "postgresql","sqlite","nodejs","jest"]
+    stack: ["javascript","express", "postgresql","sqlite","nodejs","jest"],
+    github: 'https://github.com/Michael-Subbarao/web-sprint-challenge-authentication-and-testing'
 },{
     title: "Nasa Photo of the Day",
     description: ["Fetches Astronomy Photo Of The Day from Nasa API and create a react website with styled components to show it off."],
@@ -43,7 +46,8 @@ const projectList = [{
     image:"",
     gif: "",
     date: "March 2021",
-    stack: ["react","javascript","css3","html5","axios"]
+    stack: ["react","javascript","css3","html5","axios"],
+    github: 'https://github.com/Michael-Subbarao/nasa-photo-of-the-day'
 }]
 
 export default function projects() {
@@ -52,7 +56,7 @@ export default function projects() {
       {
           projectList.map((project)=>{
             return(
-            <Project title={project.title} description= {project.description} readMore={project.readMore} role={project.role} stack={project.stack} img = {project.image} key = {project.title}/>
+            <Project title={project.title} description= {project.description} readMore={project.readMore} role={project.role} stack={project.stack} img = {project.image} key = {project.title} github= {project.github} />
             )
           })
       }

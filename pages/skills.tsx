@@ -1,12 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Main from "../sections/Main";
+import Skills from "../sections/Skills";
 
 
-export default function projects() {
+export default function skills() {
   return (
     <div>
-      <Main />
+      <Skills />
     </div>
   )
 }
