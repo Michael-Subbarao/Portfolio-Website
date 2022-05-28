@@ -1,6 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Project from "../components/Project";
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+import skills from '../pages/skills';
 
 const projectList = [{
     title: "League of Women Voter's Representative Finder",
@@ -50,15 +53,21 @@ const projectList = [{
     github: 'https://github.com/Michael-Subbarao/nasa-photo-of-the-day'
 }]
 
-export default function projects() {
+export default function Projects() {
+  //get skill variable from url
+  const router = useRouter();
+  const { skill } = router.query;
+  const projectData = skill ? projectList.filter(project => project.stack.includes(skill)):projectList;
+  console.log(projectData)
   return (
     <div className="projects grid md:grid-rows-2 md:grid-cols-2 grid-cols-1 grid-rows-4 grid-flow-col justify-center items-center content-center">
-      {
-          projectList.map((project)=>{
+      { 
+          projectData.map((project)=>{
             return(
             <Project title={project.title} description= {project.description} readMore={project.readMore} role={project.role} stack={project.stack} img = {project.image} key = {project.title} github= {project.github} />
             )
           })
+        
       }
     </div>
   )

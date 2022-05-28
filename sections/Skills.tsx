@@ -33,8 +33,7 @@ const Skills = (href) => {
       <div className="flex flex-wrap items-center justify-center gap-4 pt-6">
         {skills.map((skill, index) => {
           return (
-              //center items in div
-            <div className="w-1/2 md:w-1/4 lg:w-1/5 mb-4 w-[160px] items-center justify-center" key={index} onClick = {(e)=>{handleClick(e,'/projects/' + skill.toLowerCase())}}>
+            <div className="w-1/2 md:w-1/4 lg:w-1/5 mb-4 w-[160px] items-center justify-center" key={index} onClick = {(e)=>{handleClick(e,'/projects?skill=' + skill.toLowerCase())}}>
               <div className="bg-gray-200 rounded-lg shadow-lg p-4 h-[120px] flex flex-col items-center justify-center">
                 <img
                   className="dark:stroke-white dark:stroke-1"

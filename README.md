@@ -15,6 +15,5 @@
 * [X]Implement project section
 * [X]Implement the Navigation
 * [X]Design about, contact, etc.
-* [ ]Add unit tests
+* [X]Implement skill based search feature
 * [ ]Implement animations
-* [ ]Implement skill based search feature
