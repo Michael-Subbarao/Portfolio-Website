@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import Link from "next/link"
@@ -57,7 +58,25 @@ const Header = () => {
           >{nav.label}</a></Link>
         ))}
       </ul>
-      {renderThemeChanger()}
+      <div className="flex justify-end items-center gap-4">
+        <a href="https://www.linkedin.com/in/michael-subbarao/" target="_blank" rel="noopener noreferrer">
+        <img
+                    className="dark:stroke-white dark:stroke-1 h-10 w-10"
+                    src="/design_assets/icons/linkedin.svg"
+                    alt="GitHub logo"
+                    title="linkedIn logo"
+                  />
+        </a>
+        <a className = "dark:bg-slate-50 rounded-full" href="https://github.com/Michael-Subbarao" target="_blank" rel="noopener noreferrer">
+        <img
+                    className="dark:stroke-1 h-10 w-10 "
+                    src="/design_assets/icons/github.svg"
+                    alt="GitHub logo"
+                    title="GitHub logo"
+                  />
+        </a>
+        {renderThemeChanger()}
+      </div>
       </div>
     </header>
   )
