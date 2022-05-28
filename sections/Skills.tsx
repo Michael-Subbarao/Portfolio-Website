@@ -20,7 +20,7 @@ const skills = [
 ]
 const Skills = (href) => {
   const router = useRouter();
-  const handleClick = (e: any, href: string | null) => {
+  const handleClick = (e: any, href: any) => {
     e.preventDefault();
 
     router.push(href);

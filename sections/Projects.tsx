@@ -57,7 +57,7 @@ export default function Projects() {
   //get skill variable from url
   const router = useRouter();
   const { skill } = router.query;
-  const projectData = skill ? projectList.filter(project => project.stack.includes(skill)):projectList;
+  const projectData = skill ? projectList.filter(project => project.stack.includes(''+ skill)):projectList;
   console.log(projectData)
   return (
     <div className="projects grid md:grid-rows-2 md:grid-cols-2 grid-cols-1 grid-rows-4 grid-flow-col justify-center items-center content-center">
