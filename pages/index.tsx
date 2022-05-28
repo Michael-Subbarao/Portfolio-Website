@@ -4,7 +4,7 @@ import Main from "../sections/Main";
 
 export default function Home() {
   return (
-    <div className = "">
+    <div className = "" id = "modal-root">
       <Head>
         <title>Michael Web Dev</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />

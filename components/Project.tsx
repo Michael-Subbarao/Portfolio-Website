@@ -1,8 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
+import React, { useState } from 'react';
 import { useRouter } from 'next/router'
-import Button from "../components/Button"
+import Modal from './ProjectModal'
+import Button from "./Button"
 import Image from 'next/image';
-import Carousel from '../components/Carousel'
+import Carousel from './Carousel'
+import next from 'next';
 
 /**
  * 
@@ -63,12 +66,13 @@ import Carousel from '../components/Carousel'
 const Project = (props: any) => {
   const router = useRouter();
   const { title, description, img, gif, role, date, stack } = props;
+  const [isOpen, setIsOpen] = useState(false)
   const handleClick = (e: any, href: string | null) => {
     e.preventDefault();
     router.push(href);
   };
   return (
-    <div className="p-4 ml-[5%] rounded-2xl bg-slate-50 dark:bg-slate-600 shadow-lg dark:shadow-slate-700 flex flex-col ease-linear duration-300 items-center justify-center w-[90%]">
+    <div className="p-4 ml-[5%] rounded-2xl bg-slate-50 dark:bg-slate-600 shadow-lg dark:shadow-slate-700 flex flex-col ease-linear duration-300 justify-center w-[90%]">
       <div className="mr-2 rounded-2xl">
         <p className="m-2 font-bold pl-1 text-lg text-blue-400 dark:text-rose-400">{role}</p>
         <h1 className="m-2 text-xl md:text-4xl font-bold text-slate-700 dark:text-slate-200">
@@ -81,19 +85,23 @@ const Project = (props: any) => {
           {img && <Carousel images={img} />}
         </div>
 
-        <div className="flex flex-row justify-center items-center">
-          <button className="md:m-2 m-auto mt-8 bg-[#5865F2] shadow-sm = dark:shadow-rose-500 bg-blue-600 dark:bg-rose-600 pt-2 pb-2 w-max rounded-xl flex flex-row  hover:bg-[#424bb6] ease-linear duration-300">
+        <div className="flex flex-row r items-center">
+          <button
+           onClick={() => setIsOpen(true)}
+           className="md:m-2 m-auto bg-[#5865F2] shadow-sm = dark:shadow-rose-500 bg-blue-600 dark:bg-rose-600 pt-2 pb-2 w-max rounded-xl hover:scale-110 flex flex-row dark:hover:bg-rose-400  hover:bg-blue-400 ease-linear duration-300">
             <h1 className="text-white text-md font-semibold text-xs w-20">
               Read More
             </h1>
           </button>
-         
-          <div className="relative md:h-10  flex justify-center space-between w-full">
+          <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+          Fancy Modal
+          </Modal>
+          <div className="relative md:h-10  flex justify-around lg:w-[50%]">
             {stack &&
               stack.map((tech, i) => {
                 return (
                   <Image
-                    className="stroke-2"
+                    className="dark:stroke-white dark:stroke-1"
                     width="50px"
                     height="50px"
                     src={"/design_assets/icons/" + tech + ".svg"}

@@ -48,7 +48,7 @@ const Header = () => {
   }
 
   return (
-    <header className="h-16 mt-4 items-center flex mb-4">
+    <header className="h-16 mt-4 items-center flex mb-4" id = "modal-root">
       <div className = "w-full">
       <ul className="flex gap-2 md:gap-20 gap-2 justify-center self-center">
         {navigations.map(nav => (

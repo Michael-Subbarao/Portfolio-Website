@@ -14,7 +14,7 @@
 * [X]Implement the landing page
 * [X]Implement project section
 * [X]Implement the Navigation
-* [ ]Design about, contact, etc.
-* [ ]Implement animations
+* [X]Design about, contact, etc.
 * [ ]Add unit tests
+* [ ]Implement animations
 * [ ]Implement skill based search feature
