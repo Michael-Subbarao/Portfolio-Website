@@ -65,7 +65,7 @@ import next from 'next';
 
 const Project = (props: any) => {
   const router = useRouter();
-  const { title, description, img, gif, role, date, stack } = props;
+  const { title, description, readMore, img, gif, role, date, stack } = props;
   const [isOpen, setIsOpen] = useState(false)
   const handleClick = (e: any, href: string | null) => {
     e.preventDefault();
@@ -94,7 +94,50 @@ const Project = (props: any) => {
             </h1>
           </button>
           <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-          Fancy Modal
+            <div className="flex flex-col justify-center items-center">
+              <h1 className="text-2xl font-bold text-slate-700 dark:text-slate-200">
+                {title}
+              </h1>
+              <p className="text-sm italic text-slate-700 dark:text-slate-200">
+                {description}
+              </p>
+              <p className = "text-sm italic text-slate-700 dark:text-slate-200">
+                {readMore && readMore.map((p: any, i: number) => {
+                  return (
+                    <p key={i}>{p}</p>
+                  );
+                })}
+              </p>
+              <div className="shadow-md dark:shadow-none  w-full md:w-2/3 relative mb-8">
+                {img && <Carousel images={img} />}
+              </div>
+              <div className="relative md:h-10  flex justify-around lg:w-[50%]">
+            {stack &&
+              stack.map((tech, i) => {
+                return (
+                  <Image
+                    className="dark:stroke-white dark:stroke-1"
+                    width="50px"
+                    height="50px"
+                    src={"/design_assets/icons/" + tech + ".svg"}
+                    alt={tech + " logo"}
+                    title={tech + " logo"}
+                    key={i}
+                  />
+                );
+              })}
+          </div>
+              <div className="flex flex-row r items-center">
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="md:m-2 m-auto bg-[#5865F2] shadow-sm = dark:shadow-rose-500 bg-blue-600 dark:bg-rose-600 pt-2 pb-2 w-max rounded-xl hover:scale-110 flex flex-row dark:hover:bg-rose-400  hover:bg-blue-400 ease-linear duration-300">
+                  <h1 className="text-white text-md font-semibold text-xs w-20">
+                    Close
+                  </h1>
+                </button>
+              </div>
+            </div>
+
           </Modal>
           <div className="relative md:h-10  flex justify-around lg:w-[50%]">
             {stack &&

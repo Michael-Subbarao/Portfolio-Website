@@ -5,7 +5,12 @@ import Project from "../components/Project";
 const projectList = [{
     title: "League of Women Voter's Representative Finder",
     description: "This app was made for the Women Voters League of Maryland to allow users to find the contact information for all of their local representatives based on their address.",
-    readMore: "",
+    readMore: ["This app is currently being deployed across multiple counties Women League of Voters sites in Maryland. See: (https://www.lwvwashco.org/representatives) for an example.",
+    "Shows the following contact details for representatives filtered on Local, State, or Federal level",
+    "Name, Address (if available), Phone Number (if available) with direct phone link, Email (if available) - with direct mailto tag, Office, Photo(if available), Social Media Channels(if available) - Youtube/Twitter/Facebook with direct links",
+    "App is responsive for mobile",
+    "In deployment non-structural CSS design is done by League of Women Voters"
+  ],
     role: "Personal Project",
     image:['1-1','1-2','1-3'],
     gif: "",
@@ -14,7 +19,7 @@ const projectList = [{
 },{
     title: "RESTful Web API",
     description: "RESTful API with full CRUD functionality",
-    readMore: "Built out CRUD functionality with 11 endpoints using Express and Node. Wrote custom middleware functions for validation."
+    readMore: ["Built out CRUD functionality with 11 endpoints using Express and Node. Wrote custom middleware functions for validation."]
     ,
     role: "Backend Developer",
     image:"",
@@ -24,7 +29,7 @@ const projectList = [{
 },{
     title: "Dad Joke API",
     description: "API with login and registration endpoints that has authentication to access a dad joke library.",
-    readMore: "Added middleware functions that restrict access to resources from non-authenticated requests. Used bcrypt to hash and store passwords, and added a login function to check passwords against the stored hashes. Wrote unit tests with Jest for each API endpoint.",
+    readMore: ["Added middleware functions that restrict access to resources from non-authenticated requests. Used bcrypt to hash and store passwords, and added a login function to check passwords against the stored hashes. Wrote unit tests with Jest for each API endpoint."],
     role: "Backend Developer",
     image:"",
     gif: "",
@@ -32,7 +37,7 @@ const projectList = [{
     stack: ["javascript","express", "postgresql","sqlite","nodejs","jest"]
 },{
     title: "Nasa Photo of the Day",
-    description: "Fetches Astronomy Photo Of The Day from Nasa API and create a react website with styled components to show it off.",
+    description: ["Fetches Astronomy Photo Of The Day from Nasa API and create a react website with styled components to show it off."],
     readMore: "",
     role: "Frontend Developer",
     image:"",
