@@ -105,9 +105,6 @@ const Project = (props: any) => {
               <h1 className="text-2xl font-bold text-slate-700 dark:text-slate-200">
                 {title}
               </h1>
-              <p className="text-sm italic text-slate-700 dark:text-slate-200">
-                {description}
-              </p>
               <p className = "text-sm italic text-slate-700 dark:text-slate-200">
                 {readMore && readMore.map((p: any, i: number) => {
                   return (
