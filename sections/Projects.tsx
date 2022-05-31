@@ -8,11 +8,9 @@ import skills from '../pages/skills';
 const projectList = [{
     title: "League of Women Voter's Representative Finder",
     description: "This app was made for the Women Voters League of Maryland to allow users to find the contact information for all of their local representatives based on their address.",
-    readMore: ["This app is currently being deployed across multiple counties Women League of Voters sites in Maryland. See: (https://www.lwvwashco.org/representatives) for an example.",
+    readMore: ["This app is currently being deployed across multiple counties Women League of Voters sites in Maryland",
     "Shows the following contact details for representatives filtered on Local, State, or Federal level",
-    "Name, Address (if available), Phone Number (if available) with direct phone link, Email (if available) - with direct mailto tag, Office, Photo(if available), Social Media Channels(if available) - Youtube/Twitter/Facebook with direct links",
-    "App is responsive for mobile",
-    "In deployment non-structural CSS design is done by League of Women Voters"
+    "Name, Address (if available), Phone Number (if available) with direct phone link, Email (if available) - with direct mailto tag, Office, Photo(if available), Social Media Channels(if available) - Youtube/Twitter/Facebook with direct links"
   ],
     role: "Frontend Developer",
     image:['1-1','1-2','1-3'],

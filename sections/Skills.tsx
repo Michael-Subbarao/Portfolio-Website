@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import { useRouter } from 'next/router'
-import Button from "../components/Button"
 const skills = [
     "HTML5",
     "CSS3",
