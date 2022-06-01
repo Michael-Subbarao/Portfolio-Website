@@ -7,6 +7,9 @@
     @apply mx-auto;
     @apply bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300  transition ease-in-out
   }
+  html {
+    scroll-behavior: smooth;
+  }
   .carousel {
     display: inline-flex;
     overflow-x: hidden;

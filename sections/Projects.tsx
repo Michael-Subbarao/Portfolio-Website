@@ -61,6 +61,17 @@ const projectList = [{
     date: "March 2021",
     stack: ["react","javascript","css3","html5","axios"],
     github: 'https://github.com/Michael-Subbarao/web-sprint-challenge-advanced-web-application'
+},
+{
+  title: "This Site Was Built With",
+  description: "",
+  readMore: [""],
+  role: "",
+  image:"",
+  gif: "",
+  date: "March 2021",
+  stack: ["react","javascript","css3","html5","nextjs","tailwindcss","typescript"],
+  github:"https://github.com/Michael-Subbarao/Portfolio-Website",
 }]
 
 export default function Projects() {
