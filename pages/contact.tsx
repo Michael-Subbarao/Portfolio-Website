@@ -4,8 +4,11 @@ import Contact from "../sections/Contact";
 
 export default function contact() {
     return (
-    <div className="md:mx-48 2xl:mx-96 md:mt-20">
-        <Contact />
-    </div>
+        <><Head>
+            <title>Contact</title>
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        </Head><div className="md:mx-48 2xl:mx-96 md:mt-20">
+                <Contact />
+            </div></>
     )
 }
