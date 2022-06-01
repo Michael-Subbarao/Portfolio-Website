@@ -72,9 +72,9 @@ const Project = (props: any) => {
     router.push(href);
   };
   return (
-    <div className="p-4 ml-[5%] rounded-2xl bg-slate-50 dark:bg-slate-600 shadow-lg dark:shadow-slate-700 flex flex-col ease-linear duration-300 justify-center w-[90%]">
+    <div className="p-4 ml-[5%] rounded-2xl bg-slate-50 dark:bg-gray-200 shadow-lg dark:shadow-slate-700 flex flex-col ease-linear duration-300 justify-center w-[90%]">
       <div className="mr-2 rounded-2xl ">
-        <p className="m-2 font-bold pl-1 text-lg text-blue-400 dark:text-rose-400 flex flex-row gap-10">{role}<a className = "dark:bg-slate-300 rounded-full  w-8 h-8 md:h-10 md:w-10" href={github} target="_blank" rel="noopener noreferrer">
+        <p className="m-2 font-bold pl-1 text-lg text-blue-400 dark:text-rose-400 flex flex-row gap-10">{role}<a className = "dark:bg-gray-200 rounded-full  w-8 h-8 md:h-10 md:w-10" href={github} target="_blank" rel="noopener noreferrer">
           <img
                     className="dark:stroke-1 w-8 h-8 md:h-10 md:w-10"
                     src="/design_assets/icons/github.svg"
@@ -82,10 +82,10 @@ const Project = (props: any) => {
                     title="GitHub logo"
                   />
           </a></p>
-        <h1 className="m-2 text-xl md:text-4xl font-bold text-slate-700 dark:text-slate-200">
+        <h1 className="m-2 text-xl md:text-4xl font-bold text-slate-700 ">
           {title}
           </h1>
-        <p className="m-2 text-sm italic text-slate-700 dark:text-slate-200">
+        <p className="m-2 text-sm italic text-slate-700 ">
           {description}
         </p>
         <div className="shadow-md dark:shadow-none  basis-2/3 relative mb-8">
@@ -102,10 +102,10 @@ const Project = (props: any) => {
           </button>
           <Modal open={isOpen} onClose={() => setIsOpen(false)}>
             <div className="flex flex-col justify-center items-center">
-              <h1 className="text-2xl font-bold text-slate-700 dark:text-slate-200">
+              <h1 className="text-2xl font-bold text-slate-700 ">
                 {title}
               </h1>
-              <p className = "text-sm italic text-slate-700 dark:text-slate-200">
+              <p className = "text-sm italic text-slate-700">
                 {readMore && readMore.map((p: any, i: number) => {
                   return (
                     <p key={i}>{p}</p>
