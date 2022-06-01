@@ -2,7 +2,9 @@ import { useRouter } from 'next/router'
 import Button from "../components/Button"
 
 const Contact = () => (
-  <div className="p-6 text-slate-700 font-semibold dark:text-slate-400">
+  
+  <div className="p-6 md:mx-48 text-slate-700 font-semibold dark:text-slate-400">
+    <h1 className="ml-1  text-7xl font-bold transition ease-in-out">Contact <span className="text-blue-600 dark:text-rose-600 transition ease-in-out">Me</span></h1>
     <form>
       <div className="grid grid-cols-2 gap-4">
         <div className="flex flex-col">

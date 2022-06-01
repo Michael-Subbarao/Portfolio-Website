@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from 'next/head'
 import Image from 'next/image'
 import Project from "../components/Project";
@@ -26,7 +27,7 @@ const projectList = [{
     role: "Backend Developer",
     image:"",
     gif: "",
-    date: "March 2021",
+    date: "April 2021",
     stack: ["javascript", "nodejs", "express","sqlite","knex"],
     github: 'https://github.com/Michael-Subbarao/web-sprint-challenge-adding-data-persistence'
 },{
@@ -36,19 +37,30 @@ const projectList = [{
     role: "Backend Developer",
     image:"",
     gif: "",
-    date: "March 2021",
+    date: "April 2021",
     stack: ["javascript","express", "postgresql","sqlite","nodejs","jest"],
     github: 'https://github.com/Michael-Subbarao/web-sprint-challenge-authentication-and-testing'
 },{
     title: "Nasa Photo of the Day",
-    description: ["Fetches Astronomy Photo Of The Day from Nasa API and create a react website with styled components to show it off."],
-    readMore: "",
+    description: "Fetches Astronomy Photo Of The Day from Nasa API and create a react website with styled components to show it off.",
+    readMore: [""],
     role: "Frontend Developer",
+    image:"",
+    gif: "",
+    date: "Feb 2021",
+    stack: ["react","javascript","css3","html5","axios"],
+    github: 'https://github.com/Michael-Subbarao/nasa-photo-of-the-day'
+},
+{
+    title: "Article Editor",
+    description: "",
+    readMore: [""],
+    role: "Full Stack Developer",
     image:"",
     gif: "",
     date: "March 2021",
     stack: ["react","javascript","css3","html5","axios"],
-    github: 'https://github.com/Michael-Subbarao/nasa-photo-of-the-day'
+    github: 'https://github.com/Michael-Subbarao/web-sprint-challenge-advanced-web-application'
 }]
 
 export default function Projects() {
@@ -57,15 +69,17 @@ export default function Projects() {
   const { skill } = router.query;
   const projectData = skill ? projectList.filter(project => project.stack.includes(''+ skill)):projectList;
   return (
-    <div className="projects grid md:grid-rows-2 md:grid-cols-2 grid-cols-1 grid-rows-4 grid-flow-row justify-center items-center content-center">
-      { 
-          projectData.map((project)=>{
-            return(
-            <Project title={project.title} description= {project.description} readMore={project.readMore} role={project.role} stack={project.stack} img = {project.image} key = {project.title} github= {project.github} />
-            )
-          })
-        
-      }
-    </div>
+    <><h1 className="ml-1 mb-5 md:mb-20 md:ml-10  text-4xl md:text-7xl font-bold transition ease-in-out text-blue-600 dark:text-rose-600 transition ease-in-out flex justify-center items-center">Projects {skill && <><h1 className = "ml-2 mr-2 md:ml-5 md:mr-5"> with: </h1> 
+    <img className = "w-10 md:w-20" src = {"/design_assets/icons/" + skill + ".svg"} alt = {skill + "logo"}>
+    </img></>}</h1>
+    <div className="projects grid md:grid-cols-2 grid-cols-1 grid-flow-row justify-center items-center content-center">
+      {projectData.map((project) => {
+        return (
+          <div className ='mb-10 md:mb-20' key={project.title}>
+            <Project title={project.title} description={project.description} readMore={project.readMore} role={project.role} stack={project.stack} img={project.image}  github={project.github} />
+          </div>
+        );
+      })}
+    </div></>
   )
 }

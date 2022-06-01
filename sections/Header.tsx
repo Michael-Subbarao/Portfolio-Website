@@ -26,7 +26,7 @@ const Header = () => {
     
     if(currentTheme === 'dark') {
       return (
-        <Button className="bg-gray-200 dark:bg-gray-600 dark:float-right"
+        <Button className="bg-gray-300 dark:bg-gray-600 dark:float-right"
           onClick={() => setTheme('light')}
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -36,7 +36,7 @@ const Header = () => {
       )
     } else {
       return (
-        <Button className="bg-gray-200 float-right"
+        <Button className="bg-gray-300 float-right"
           onClick={() => setTheme('dark')}
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -49,25 +49,26 @@ const Header = () => {
   }
 
   return (
-    <header className="h-16 mt-4 items-center flex mb-4" id = "modal-root">
-      <div className = "w-full">
-      <ul className="flex gap-2 md:gap-20 gap-2 justify-center self-center">
+    <header className="h-16 items-center flex mb-4 z-[9999]" id = "modal-root">
+      <div className = "fixed w-full dark:bg-slate-900 bg-slate-200">
+      
+      <div className="flex md:justify-center items-center gap-1 md:gap-4 pb-4 pt-4">
+      <ul className= "flex gap-1 justify-center self-center ">
         {navigations.map(nav => (
           <Link href={nav.path} key={nav.label}><a
-            className="font-semibold text-base md:text-lg lg:text-xl hover:underline hover:text-slate-900 text-gray-600 dark:text-gray-400 dark:hover:text-gray-200 transition ease-in-out"
+            className="font-semibold text-sm md:mr-4 md:text-lg lg:text-2xl hover:underline hover:text-slate-900 text-gray-600 dark:text-gray-400 dark:hover:text-gray-200 transition ease-in-out"
           >{nav.label}</a></Link>
         ))}
       </ul>
-      <div className="flex justify-end items-center gap-4">
         <a href="https://www.linkedin.com/in/michael-subbarao/" target="_blank" rel="noopener noreferrer">
         <img
-                    className="dark:stroke-white dark:stroke-1 h-10 w-10"
+                    className="dark:stroke-white dark:stroke-1 h-10 w-10 hover:outline-2 hover:outline-white hover:-translate-y-1 active:translate-y-0"
                     src="/design_assets/icons/linkedin.svg"
                     alt="GitHub logo"
                     title="linkedIn logo"
                   />
         </a>
-        <a className = "dark:bg-slate-300 dark-outline-slate-600 rounded-full" href="https://github.com/Michael-Subbarao" target="_blank" rel="noopener noreferrer">
+        <a className = "dark:bg-slate-300 dark-outline-slate-600 rounded-full hover:-translate-y-1 active:translate-y-0" href="https://github.com/Michael-Subbarao" target="_blank" rel="noopener noreferrer">
         <img
                     className="dark:stroke-1 h-10 w-10 "
                     src="/design_assets/icons/github.svg"

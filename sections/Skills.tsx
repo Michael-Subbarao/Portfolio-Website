@@ -25,9 +25,9 @@ const Skills = (href) => {
     router.push(href);
   };
   return (
-    <section className="h-96 mt-4  lg:mt-8">
-      <h3 className="text-lg md:text-4x1 lg:text-7xl font-bold text-center transition ease-in-out">
-        Click a Skill to see projects I've worked on with that skill
+    <section className="mt-4  lg:mt-8">
+      <h3 className="text-lg md:text-4x1 md:mx-48 lg:text-7xl font-bold text-center transition ease-in-out">
+        Click a Skill to see projects I have worked on with that skill
       </h3>
       <div className="flex flex-wrap items-center justify-center gap-4 pt-6">
         {skills.map((skill, index) => {

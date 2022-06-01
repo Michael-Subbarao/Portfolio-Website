@@ -9,7 +9,7 @@ const Main = (href) => {
     router.push(href)
   }
   return (
-    <section className="h-96 mt-10 md:mt-32  md:pr-30 lg:mt-64 lg:pr-60 lg:pl-60 ">
+    <section className="mt-10 md:mt-32 px-4 md:pr-30 lg:mt-64 lg:pr-60 lg:pl-60 ">
       <h1 className="text-7xl font-bold transition ease-in-out">Hi I am <span className="text-blue-600 dark:text-rose-600 transition ease-in-out">Michael Subbarao</span></h1>
       <h3 className="text-4xl my-3 transition ease-in-out">Full Stack Web Developer</h3>
       <p className="max-w-screen text-slate-900 dark:text-slate-100 mb-8 transition ease-in-out"> I specialize in the PERN stack (PostgreSQL, Express, React, Node). Check out some of my work!</p>
