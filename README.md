@@ -16,4 +16,5 @@
 * [X]Implement the Navigation
 * [X]Design about, contact, etc.
 * [X]Implement skill based search feature
+* [ ]Implement the Contact Form functionality
 * [ ]Implement animations
