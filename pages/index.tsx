@@ -14,21 +14,17 @@ export default function Home() {
         <title>Michael Web Dev</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
+      { 
       <DownArrow />
-      <section className="min-h-max mb-[20%] md:mb-[30%]">
+      }
+      <section className="min-h-max mb-[40%] lg:mb-[30%]">
         <Main />
       </section>
-      <section className="min-h-max md:mb-60">
+      <section className="min-h-max mb-[20%] lg:mb-[35%]">
         <About />
       </section>
-      <section className="min-h-max mb-10 md:mb-60">
+      <section className="min-h-max mb-10">
         <Skills />
-      </section>
-      <section className="min-h-max md:mb-60">
-        <Projects />
-      </section>
-      <section className="min-h-max">
-        <Contact />
       </section>
     </div>
     </>
